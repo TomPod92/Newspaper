@@ -22,7 +22,7 @@ class OverView extends React.Component {
                 </ul>
 
                 <img 
-                    className={`{this.state.enlarge} ? overView__image overView__image--enlarged : overView__image`} 
+                    className={ this.state.enlarge ? 'overView__image overView__image--enlarged' : 'overView__image'} 
                     src={require(`../images/back.jpg`)} 
                     alt="background"
                     onClick={this.handleEnlarge}
