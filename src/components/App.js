@@ -2,12 +2,26 @@ import React from "react";
 import Header from "./Header.js";
 import List from "./List.js";
 import Article from "./Article.js";
-import OverView from "./Overview.js";
-// import { BrowserRouter, Route, Link, Switch } from "react-router-dom";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Switch, HashRouter } from "react-router-dom";
+
+import { createGlobalStyle } from 'styled-components';
+
+const GlobalStyle = createGlobalStyle`
+  body { 
+    box-sizing: border-box; 
+    width: 100vw;
+    padding: 1rem;
+    font-family: 'Lato', sans-serif;
+  }
+  html { font-size: 62.5%; }
+  *,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; 
+  }
+`;
 
 class App extends React.Component {
-
   state = {
     iconName: 'icon-search'
   }
@@ -23,17 +37,18 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <BrowserRouter>
+      <>
+        <GlobalStyle/>
+        <HashRouter>
           <Header iconName={this.state.iconName}/>
-          <OverView />
-
-          <Switch>
-            <Route path="/" exact component={List}/>
-            <Route path="/:id" render={(routeProps) => <Article {...routeProps} click={this.handleRouteChange}/>} />
-          </Switch>
-        </BrowserRouter>
-      </div>
+          <main>
+            <Switch>
+              <Route path="/" exact component={List}/>
+              <Route path="/:id" render={(routeProps) => <Article {...routeProps} click={this.handleRouteChange}/>} />
+            </Switch>
+          </main>
+        </HashRouter>
+      </>
     );
   }
 }
