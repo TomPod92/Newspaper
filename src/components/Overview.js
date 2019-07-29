@@ -61,7 +61,11 @@ const ImageDiv = styled.div`
         /* transform:${ props => props.enlarge ? 'scale(1.05)' : 'scale(1)'}; */
 
         @media(min-width: 500px ) {
-            width: 80%;
+            width: 70%;
+        }
+
+        @media(min-width: 900px ) {
+            width: 50%;
         }
     }
 `;
