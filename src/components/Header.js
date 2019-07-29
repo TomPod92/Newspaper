@@ -3,12 +3,16 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import sprite from '../images/sprite.svg';
 import styled from 'styled-components';
+import { colors } from './colors.js';
 
 const HeaderDiv = styled.header`
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 1rem 0;
+    padding: 1rem 1rem;
+    margin-bottom: 2rem;
+    background-color: ${colors.primary};
+    box-shadow: 0 0 1rem rgba(112, 112, 112, 0.25);
 `;
 
 const HeaderMenu = styled(Link)`
@@ -16,9 +20,12 @@ const HeaderMenu = styled(Link)`
     align-items: center;
     position: relative;
     width: 2rem;
-    height: 2rem;
     margin-right: 3rem;
     transition: all .5s ease;
+
+    :hover {
+        transform: scale(1.1);
+    }
 
     span {
         width: 100%;
@@ -39,8 +46,8 @@ const HeaderMenu = styled(Link)`
             transition: all .3s ease;
         }
 
-        ::before {transform: translateY(-5px);}
-        ::after {transform: translateY(5px);}
+        ::before {transform: translateY(-6px);}
+        ::after {transform: translateY(6px);}
     }
 
     &.rotate {
@@ -60,13 +67,25 @@ const HeaderMenu = styled(Link)`
 
 const H1 = styled.h1`
     font-size: 2rem;
+    letter-spacing: 1px;
     margin-right: auto;
+
+    @media(min-width: 900px) {
+        font-size: 3rem;
+    }
 `;
 
 const HeaderIcon = styled.div`
     width: 2rem;
     height: 2rem;
     margin-right: 1rem;
+    backface-visibility: hidden;
+    transition: all .5s ease;
+
+    :hover {
+        transform: scale(1.1);
+        fill: ${colors.secondary};
+    }
 `;
 
 class Header extends React.Component {

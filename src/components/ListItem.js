@@ -6,16 +6,18 @@ const ListItemDiv = styled.div`
   display: flex;
   width: 100%;
   border-bottom: 1px solid #eee;
-  margin-bottom: 1rem;
+  padding: 1rem 2rem;
   text-decoration: none;
   transition: all .3s ease;
 
   &:hover {
-    background-color: #eee;
+    background-color: rgba(128, 189, 225, 0.3);
+    box-shadow: 0 0 1rem rgba(112, 112, 112, 0.25);
+    transform: scale(1.02);
   }
 
   @media(min-width: 500px ) {
-    width: 60%;
+    width: 75%;
   }
 `;
 
@@ -28,12 +30,14 @@ const Info = styled.div`
   & h2 {
     font-size: 2rem;
     line-height: 1.3;
+    width: 100%;
   }
 
   & h3 {
     text-transform: uppercase;
     font-size: 1rem;
     line-height: 1.3;
+    width: 100%; 
   }
 `;
 
@@ -46,6 +50,11 @@ const Image = styled.div`
   & img {
     width: 6rem;
     height: 6rem;
+
+    @media(min-width: 900px) {
+      width: 8rem;
+      height: 8rem;
+    }
   }
 `;
 

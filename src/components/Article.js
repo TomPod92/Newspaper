@@ -2,6 +2,8 @@ import React from "react";
 import data from "../data/data.js";
 import styled from 'styled-components';
 
+import { colors } from './colors.js';
+
 
 const ArticleWrapper = styled.article`
   display: block;
@@ -22,38 +24,72 @@ const H3 = styled.h3`
 
 const ArticleTitle = styled.h2`
   display: block;
-  width: 70%;
-  margin: 1.5rem 0;
-  font-size: 2.5rem;
+  width: 80%;
+  position: relative;
+  margin: 3rem auto 5rem auto;
+  text-align: center;
+  font-size: 3rem;
   font-weight: bold;
+
+  ::after {
+    content:'';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: -1rem;
+    width: 60%;
+    height: 3px;
+    background-color: ${colors.secondary};
+    transform: translateX(-50%);
+  }
 `;
 
 const ArticleBody = styled.p`
   display: block;
-  margin: 2rem 0;
+  padding: 2rem 3rem;
+  margin: 2rem 0 4rem 0;
   font-size: 1.5rem;
-  line-height: 1.8;
+  line-height: 2;
   color: grey;
+  background-color: ${colors.primary};
+  box-shadow: 0 0 1rem rgba(112, 112, 112, 0.25);
+
+  @media( min-width: 900px) {
+    font-size: 1rem;
+  }
 `;
 
 const ArticleFooter = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 3rem;
 
   img {
     width: 5rem;
     border-radius: 50%;
-    margin-right: 2rem;
+    margin: 0 2rem;
+
+    @media(min-width: 900px) {
+      margin-right: 4rem;
+      width: 8rem;
+    }
   }
 
   p {
+    display: block;
+    width: 100%;
     font-size: 1.6rem;
 
     span {
       display: inline-block;
       font-size: 2rem;
       padding-bottom: 4px;
-      border-bottom: 1px solid grey;
+      border-bottom: 2px solid ${colors.secondary};
+
+      @media(min-width: 900px) {
+        margin-left: 1rem;
+        font-size: 3rem;
+      }
     }
   }
 `;
