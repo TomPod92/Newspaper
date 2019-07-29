@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.js": "/Newspaper/static/js/main.803f64b6.chunk.js",
-    "main.js.map": "/Newspaper/static/js/main.803f64b6.chunk.js.map",
+    "main.js": "/Newspaper/static/js/main.d4a6f03e.chunk.js",
+    "main.js.map": "/Newspaper/static/js/main.d4a6f03e.chunk.js.map",
     "runtime~main.js": "/Newspaper/static/js/runtime~main.5bf8f918.js",
     "runtime~main.js.map": "/Newspaper/static/js/runtime~main.5bf8f918.js.map",
     "static/js/2.f9a15bac.chunk.js": "/Newspaper/static/js/2.f9a15bac.chunk.js",
     "static/js/2.f9a15bac.chunk.js.map": "/Newspaper/static/js/2.f9a15bac.chunk.js.map",
     "index.html": "/Newspaper/index.html",
-    "precache-manifest.9c35dbe696f27696cdcf974187055ecf.js": "/Newspaper/precache-manifest.9c35dbe696f27696cdcf974187055ecf.js",
+    "precache-manifest.78ee00e57f5089bd557a9a2886103ec2.js": "/Newspaper/precache-manifest.78ee00e57f5089bd557a9a2886103ec2.js",
     "service-worker.js": "/Newspaper/service-worker.js",
-    "static/media/11.jpg": "/Newspaper/static/media/11.7ec5c4d7.jpg",
-    "static/media/22.jpg": "/Newspaper/static/media/22.ba872e37.jpg",
-    "static/media/33.jpg": "/Newspaper/static/media/33.7ce1fef1.jpg",
-    "static/media/back.jpg": "/Newspaper/static/media/back.0db103ec.jpg",
+    "static/media/11.jpg": "/Newspaper/static/media/11.9e53b018.jpg",
+    "static/media/22.jpg": "/Newspaper/static/media/22.0ba43d7f.jpg",
+    "static/media/33.jpg": "/Newspaper/static/media/33.73c84836.jpg",
+    "static/media/back.jpg": "/Newspaper/static/media/back.0a5ec709.jpg",
     "static/media/sprite.svg": "/Newspaper/static/media/sprite.9fbaf465.svg"
   }
 }
