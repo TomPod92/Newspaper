@@ -1,13 +1,25 @@
 import React from "react";
 import data from "../data/data.js";
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import { colors } from './colors.js';
 
+const fadeIn = keyframes`
+  0% { 
+    opacity: 0;
+    transform: scale(0.75); 
+  }
+  100% { 
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
 
 const ArticleWrapper = styled.article`
   display: block;
   width: 100%;
+
+  animation: ${fadeIn} 0.5s 0.2s both;
 `;
 
 const ArticleImage = styled.img`
